@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prachi - Portfolio - 2026 - color option</title>
+
+    <!-- Favicon -->
+
+    <link rel="icon" type="image/png" href="assets/pp.png">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Swamiho!!! -->
+
+    <!-- <PrachiBapat> -->
+
+</head>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #173b2a;
+    line-height: 1.6;
+    position: relative;
+    z-index: 0;
+
+    background:
+        radial-gradient(circle at 5% 5%, rgba(34, 197, 94, 0.22), transparent 22%),
+        radial-gradient(circle at 95% 20%, rgba(250, 204, 21, 0.18), transparent 25%),
+        radial-gradient(circle at 15% 75%, rgba(236, 72, 153, 0.12), transparent 25%),
+        linear-gradient(135deg, #f7fff8 0%, #edfff1 50%, #ffffff 100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('assets/doodle.jpg');
+    background-size: 300px;
+    background-repeat: repeat;
+    opacity: 0.035;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 2px solid rgba(34, 197, 94, 0.12);
+    right: -160px;
+    top: 35%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navbar {
+    width: calc(100% - 40px);
+    max-width: 1400px;
+    margin: 15px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+
+    background: rgba(236, 255, 241, 0.92);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(22, 163, 74, 0.18);
+    border-radius: 18px;
+
+    padding: 12px 14px;
+
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+
+    box-shadow:
+        0 10px 35px rgba(22, 163, 74, 0.12);
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow:
+        0 15px 45px rgba(22, 163, 74, 0.18);
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.3s ease;
+}
+
+.nav-item.logo img:hover {
+    transform: rotate(360deg) scale(1.08);
+}
+
+.nav-item a {
+    font-size: 0.92rem;
+    font-weight: 500;
+
+    color: #087f3e;
+
+    text-decoration: none;
+    display: inline-block;
+
+    padding: 7px 9px;
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+.nav-item a:hover {
+    transform: translateY(-2px);
+    color: #065f46;
+    background: rgba(163, 230, 53, 0.35);
+    text-decoration: none;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 85px 8vw 80px;
+}
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: 1.08;
+    font-weight: 600;
+
+    margin-bottom: 32px;
+
+    color: #047857;
+
+    max-width: 850px;
+
+    letter-spacing: -1.5px;
+
+    position: relative;
+}
+
+h1::before {
+    content: "PORTFOLIO • 2026";
+
+    display: block;
+
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+
+    color: #65a30d;
+
+    margin-bottom: 14px;
+}
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 5px;
+
+    margin-top: 18px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #00c853,
+        #a3e635,
+        #facc15
+    );
+}
+
+h2 {
+    color: #047857;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.intro {
+    max-width: 820px;
+    margin-bottom: 55px;
+
+    font-size: 1.05rem;
+
+    color: #285943;
+}
+
+strong {
+    font-weight: 600;
+    color: #059669;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   FEATURED INTRO AREA
+   ========================================================= */
+
+.featured {
+    margin: 30px 0 85px;
+
+    padding: 28px 32px;
+
+    border: 1px solid rgba(34, 197, 94, 0.18);
+    border-left: 6px solid #84cc16;
+
+    border-radius: 0 22px 22px 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(220, 252, 231, 0.95),
+            rgba(254, 249, 195, 0.55)
+        );
+
+    box-shadow:
+        0 12px 35px rgba(34, 197, 94, 0.09);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.featured::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(236, 72, 153, 0.16);
+
+    right: -45px;
+    bottom: -65px;
+}
+
+/* =========================================================
+   PROJECT CARDS
+   ========================================================= */
+
+.project {
+    margin-top: 65px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 110px;
+
+    padding: 34px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.94),
+            rgba(236, 253, 245, 0.88)
+        );
+
+    border: 1px solid rgba(34, 197, 94, 0.16);
+
+    box-shadow:
+        0 12px 40px rgba(22, 163, 74, 0.07);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.project::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00c853,
+            #84cc16,
+            #facc15,
+            #fb7185
+        );
+
+    opacity: 0.9;
+}
+
+.project::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(163, 230, 53, 0.10);
+
+    right: -80px;
+    top: -80px;
+
+    pointer-events: none;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 24px 60px rgba(22, 163, 74, 0.14);
+
+    border-color:
+        rgba(34, 197, 94, 0.30);
+}
+
+/* =========================================================
+   PROJECT HEADER
+   ========================================================= */
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    gap: 25px;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid rgba(22, 163, 74, 0.12);
+
+    position: relative;
+    z-index: 1;
+}
+
+.project-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    color: #047857;
+
+    letter-spacing: -0.3px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project:hover .project-title {
+    color: #00a844;
+    transform: translateX(3px);
+}
+
+.project-tag {
+    font-size: 0.82rem;
+
+    color: #55745f;
+
+    font-style: italic;
+
+    white-space: nowrap;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(187, 247, 208, 0.9),
+            rgba(254, 240, 138, 0.7)
+        );
+}
+
+/* =========================================================
+   PROJECT DESCRIPTION
+   ========================================================= */
+
+.project-description {
+    font-size: 1rem;
+
+    margin-bottom: 18px;
+
+    max-width: 800px;
+
+    color: #285943;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   MEDIA / IMAGES / VIDEOS
+   ========================================================= */
+
+.project-images {
+    width: 100%;
+
+    display: flex;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 18px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.4s ease;
+}
+
+.project-image.device {
+    width: 100%;
+}
+
+.project-images img.project-image:hover {
+    transform: scale(1.012);
+
+    box-shadow:
+        0 20px 45px rgba(22, 163, 74, 0.18);
+
+    filter: saturate(1.08);
+}
+
+.project-images iframe {
+    box-shadow:
+        0 12px 35px rgba(22, 163, 74, 0.10);
+
+    transition:
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+}
+
+.project-images iframe:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 50px rgba(22, 163, 74, 0.18);
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.project-description a {
+    color: #059669;
+
+    font-weight: 500;
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.project-description a:hover {
+    color: #db2777;
+
+    padding-left: 3px;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ecfdf5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4ade80;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #16a34a;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .nav-item.logo {
+        grid-column: 1 / -1;
+    }
+
+    .container {
+        padding: 65px 25px;
+    }
+
+    .project {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        width: calc(100% - 20px);
+        margin-top: 10px;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+
+        padding: 14px;
+
+        border-radius: 16px;
+
+        top: 10px;
+    }
+
+    .nav-item.logo {
+        grid-column: 1 / -1;
+    }
+
+    .container {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .featured {
+        padding: 22px;
+        margin-bottom: 55px;
+    }
+
+    .project {
+        padding: 20px;
+
+        margin-bottom: 75px;
+
+        border-radius: 20px;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .project-tag {
+        white-space: normal;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .navbar {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-item.logo {
+        grid-column: auto;
+    }
+
+    .nav-item a {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 45px 15px;
+    }
+
+    .project {
+        padding: 17px;
+    }
+
+}
+
+</style>
+
+<body>
+
+   <nav class="navbar">
+
+    <div class="nav-item logo">
+
+        <img src="assets/pp.png" alt="Logo">
+
+    </div>
+
+      <div class="nav-item">
+
+        <a href="#future">Future festival</a>
+
+    </div>
+
+    <div class="nav-item">
+
+        <a href="#shark">Sharks campaign</a>
+
+    </div>
+
+    <div class="nav-item">
+
+       <a href="#irish">The Irish Box</a>
+
+    </div>
+
+    <div class="nav-item">
+
+        <a href="#anamorphosis">Anamorphosis website</a>
+
+    </div>
+
+      <div class="nav-item">
+
+        <a href="#campaign">Campaign</a>
+
+    </div>
+
+      <div class="nav-item">
+
+        <a href="#sketches">Sketches</a>
+
+    </div>
+
+    <div class="nav-item">
+
+        <a href="#book">Book design</a>
+
+    </div>
+
+      <div class="nav-item">
+
+        <a href="#buzz">Video</a>
+
+    </div>
+
+</nav>
+
+<!-- My section Prachi Bapat -->
+
+<div class="container">
+
+<h1>Hey hi !! I am Prachi Bapat...</h1>
+
+<div class="intro">
+
+    <p>
+
+    artistic_part
+
+        <a href="https://www.instagram.com/artistic_part/" target="_blank" rel="noopener noreferrer">
+
+        <strong>Prachi Bapat</strong>
+
+        </a>
+
+       innovative designs <strong>graphics designer</strong> 
+
+        <a href="https://www.instagram.com/artistic_part/" target="_blank" rel="noopener noreferrer">Instagram</a>, 
+
+        <a href="https://www.youtube.com/@bapatprachi1" target="_blank" rel="noopener noreferrer">YouTube</a>, 
+
+        <a href="https://github.com/PrachiBapat" target="_blank" rel="noopener noreferrer">GitHub</a>, and 
+
+       I am an experienced graphics designer since few years. I have Technical expertise and my creative ideas 
+
+        are out-of-box. I like to create innovative designs. Recently, in August 2022 I completed my program in 
+
+        VanArts Vancouver, CANADA. I am from an art background and like doodling and sketching whenever I get time. 
+
+        I was working as a freelancer.
+
+        Paintings act as a stress buster for me. I have a unique mix of creative, hard-working, time management, and 
+
+        technical skills. I design and develop services for customers of all sizes, specializing in creating stylish, 
+
+        modern websites. My passion is to design digital user experiences through a bold interface and meaningful 
+
+        interactions.
+
+    </p>
+
+    </div>
+
+    <div class="featured">
+
+        <p>
+
+            My work#doodling#sketching
+
+            <a href="https://www.instagram.com/artistic_part/" target="_blank" rel="noopener noreferrer">
+
+            <strong>@design</strong>
+
+            </a>
+
+            my creative ideas , 
+
+            <a href="https://www.instagram.com/artistic_part/" target="_blank" rel="noopener noreferrer"></a>
+
+            <a href="https://www.instagram.com/artistic_part/" target="_blank" rel="noopener noreferrer">
+
+                <strong>Work 2025</strong>
+
+            </a>, and 2026 and much more.
+
+        </p>
+
+    </div>
+
+
+<!-- Future sound festival - Video -->
+
+<div class="project" id="future">
+
+<div class="project-header">
+
+<h2 class="project-title">Future festival - Video</h2>
+
+<span class="project-tag">Year 2 - Term 1-1</span>
+
+</div>
+
+<p class="project-description">
+
+    This is a video for the Future Sound event.It's a 16-second video. <br>
+
+     <a href="https://www.instagram.com/p/DY4SXnEIlF7/" target="_blank" rel="noopener noreferrer">
+
+        <strong>Instagram - Future sound festival</strong>
+
+        </a>
+
+<div class="project-images">
+
+    <iframe 
+
+        class="project-image device"
+
+        src="https://www.youtube.com/embed/Sf2sxifZzIE"
+
+        style="width:100%; height:500px; border-radius:8px; border:none;"
+
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+        allowfullscreen>
+
+    </iframe>
+
+</div>
+
+</div>
+
+
+<!-- Shark campaign -->
+
+<div class="project" id="shark">
+
+<div class="project-header">
+
+<h2 class="project-title">Shark Campaign</h2>
+
+<span class="project-tag">Year 2 - Term 1-1</span>
+
+</div>
+
+<p class="project-description">
+
+This is the final package design. I used the modules
+
+in the background instead of the background
+
+colour. The packaging will look like a tiny box,
+
+with the banner, string, infographic DIY sheet,
+
+stamp, stickers, reference banner and information
+
+zinc included inside. I’m playing with the colours.
+
+The banner has the same triangle shape as one of
+
+the modules used. That’s why I picked a triangle as
+
+my banner. orange, navy blue, white, and blue. I’m using the same
+
+colour pallet for the banner, poster, and everything else.
+
+I used orange and blue because it was a shark project
+
+and I had chosen reproduction as my topic. The colour
+
+orange indicates reproduction, while blue depicts the ocean. 
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DTfpolkDM44/?img_index=1">
+
+<div class="project-image device">
+
+<img 
+
+src="assets/SharksCampaign.jpeg" 
+
+class="project-image device"
+
+style="width:100%; height:100%; object-fit:cover; display:block; border-radius:8px;"
+
+alt="sharks"
+
+/>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Shark campaign - Video -->
+
+<div class="project">
+
+<div class="project-header">
+
+<h2 class="project-title">Shark Campaign - Video</h2>
+
+<span class="project-tag">Year 2 - Term 1-1</span>
+
+</div>
+
+<p class="project-description">
+
+The animation includes my modules and the message I want to express. It’s a 14-second video created in After Effects. 
+
+Reproduction of sharks - <br> SAVE SHARKS. LET THE SHARK GROW <br>
+
+<a href="https://www.instagram.com/p/DTz6Tdmjepw/?img_index=1" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Sharks Campaign</strong>
+
+</a>
+
+<div class="project-images">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/jfuZoXgCUTU"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- The Irish Box -->
+
+<div class="project" id="irish">
+
+<div class="project-header">
+
+<h2 class="project-title">The Irish Box - The untold story</h2>
+
+<span class="project-tag">Year 2 - Term 2-1</span>
+
+</div>
+
+<p class="project-description">
+
+This video was developed for Samuel Britain, a jewellery designer. The video shows emotions, familial connections, 
+
+memories, and bonds. It's a kind of cover for a story from the 1960s Irish conflicts. However, the story illustrates 
+
+how memories, even if they are not pleasant, remain a part of our lives because they are associated with people 
+
+we care about.<br>
+
+<a href="https://www.instagram.com/p/DXGnGL6jYrQ/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - The Irish Box</strong>
+
+</a>
+
+</p>
+
+<div class="project-images">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/rxQp_QHBBwI"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- Website Anamorphosis -->
+
+<div class="project" id="anamorphosis">
+
+<div class="project-header">
+
+<h2 class="project-title">Anamorphosis website</h2>
+
+<span class="project-tag">Year 2 - Term 2-1</span>
+
+</div>
+
+<p class="project-description">
+
+Anamorphosis is a distorted projection that requires the viewer to occupy a 
+
+specific vantage point, use special devices, or both to view a recognisable image. 
+
+There are two main types of anamorphosis:perspective(oblique) and mirror (catoptric). <br>
+
+<a href="https://www.instagram.com/p/DY26A_AoNQ3/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Anamorphosis</strong>
+
+</a>
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DY26A_AoNQ3/">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/jjucuS_l2oU"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="autoplay; encrypted-media"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- Anamorphosis site no 2 -->
+
+<div class="project">
+
+<div class="project-header">
+
+<h2 class="project-title">Anamorphosis website - 2</h2>
+
+<span class="project-tag">Year 2 - Term 2-1</span>
+
+</div>
+
+<p class="project-description">
+
+Anamorphosis is a distorted projection that requires the viewer to occupy a 
+
+specific vantage point, use special devices, or both to view a recognisable image. 
+
+There are two main types of anamorphosis:perspective(oblique) and mirror (catoptric).
+
+(Anamorphosis site no two) <br>
+
+<a href="https://www.instagram.com/p/DY26xg7IZVU/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Anamorphosis</strong>
+
+</a>
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DY26xg7IZVU/">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/wKIyB-eJLmo"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="autoplay; encrypted-media"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- Billboard - Campaign -->
+
+<div class="project" id="campaign">
+
+<div class="project-header">
+
+<h2 class="project-title"> Hearing Loss due to headphones - Campaign</h2>
+
+<span class="project-tag">Year 2 - Term 2-2</span>
+
+</div>
+
+<p class="project-description">
+
+Billboards - Landscape <br>
+
+<a href="https://www.instagram.com/p/DY2wqzvoAAr/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Hearing loss due to headphones Campaign</strong>
+
+</a>
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DY2wqzvoAAr/">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/767msRxEMl8"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="autoplay; encrypted-media"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- Billboard - Campaign - Portrait -->
+
+<div class="project" id="campaign">
+
+<div class="project-header">
+
+<h2 class="project-title"> Billboard Campaign</h2>
+
+<span class="project-tag">Year 2 - Term 2-2</span>
+
+</div>
+
+<p class="project-description">
+
+Billboards - Portrait
+
+Hearing Loss due to headphones<br>
+
+<a href="https://www.instagram.com/p/DY2xyRoocsJ/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Hearing loss due to headphones - Campaign Portrait</strong>
+
+</a>
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DY2xyRoocsJ/">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/bPIADqx1MvQ"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="autoplay; encrypted-media"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- Budget - Campaign -->
+
+<div class="project" id="campaign">
+
+<div class="project-header">
+
+<h2 class="project-title"> Budget Campaign</h2>
+
+<span class="project-tag">Year 2 - Term 2-2</span>
+
+</div>
+
+<p class="project-description">
+
+Budget - Hearing Loss due to headphones <br>
+
+<a href="https://www.instagram.com/p/DY2-UrKo-hL/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Hearing loss due to headphones - Campaign Budget</strong>
+
+</a>
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DY2-UrKo-hL/">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/WJ8DaYz_bf4"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="autoplay; encrypted-media"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- Logo campaign -->
+
+<div class="project" id="campaign">
+
+<div class="project-header">
+
+<h2 class="project-title">Hearing Loss due to headphone Campaign</h2>
+
+<span class="project-tag">Year 2 - Term 1-1</span>
+
+</div>
+
+<p class="project-description">
+
+Logo - Hearing Loss due to headphone <br>
+
+<a href="https://www.instagram.com/p/DY2y972jb9u/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Hearing loss due to headphones - Campaign Logo</strong>
+
+</a> 
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DY2y972jb9u/">
+
+<div class="project-image device">
+
+<img 
+
+src="assets/Hearing Loss due to Headphones - Logo-01.jpg" 
+
+class="project-image device"
+
+style="width:100%; height:100%; object-fit:cover; display:block; border-radius:8px;"
+
+alt="sharks"
+
+/>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Sketches -->
+
+<div class="project" id="sketches">
+
+<div class="project-header">
+
+<h2 class="project-title"> Sketches</h2>
+
+<span class="project-tag">Year 2</span>
+
+</div>
+
+<p class="project-description">
+
+handmade Sketches <br>
+
+<a href="https://www.instagram.com/artistic_part/reel/DY2yWN8I6-Y/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Sketches</strong>
+
+</a> 
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/artistic_part/reel/DY2yWN8I6-Y/">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/px8XT_Nkpfc"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="autoplay; encrypted-media"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- Book -->
+
+<div class="project" id="book">
+
+<div class="project-header">
+
+<h2 class="project-title">The Sorting Robot</h2>
+
+<span class="project-tag">Year 1 - Term 2-1</span>
+
+</div>
+
+<p class="project-description">
+
+The sorting robot. Designing book.<br>
+
+<a href="https://www.instagram.com/p/DOA12x0DUyA/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - The Sorting Robot - Book Design</strong>
+
+</a> 
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DOA12x0DUyA/">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/66nBDnQL9U8"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="autoplay; encrypted-media"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- Video - Buzz -->
+
+<div class="project" id="buzz">
+
+<div class="project-header">
+
+<h2 class="project-title">The Buzz</h2>
+
+<span class="project-tag">Year 1 - Term 2-1</span>
+
+</div>
+
+<p class="project-description">
+
+Onomatopoeia <br>
+
+<a href="https://www.instagram.com/p/DYuwjzrI7lY/" target="_blank" rel="noopener noreferrer">
+
+<strong>Instagram - Buzz</strong>
+
+</a>
+
+</p>
+
+<div class="project-images" data-link="https://www.instagram.com/p/DYuwjzrI7lY/">
+
+<iframe 
+
+class="project-image device"
+
+src="https://www.youtube.com/embed/GcsMvX7XHA8"
+
+style="width:100%; height:500px; border-radius:8px; border:none;"
+
+allow="autoplay; encrypted-media"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    console.log('Portfolio page loaded');
+
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+});
+
+document.querySelectorAll('.project-images').forEach(project => {
+
+    project.addEventListener('click', () => {
+
+        if (project.dataset.link) {
+            window.open(project.dataset.link, '_blank', 'noopener');
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
