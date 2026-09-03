@@ -1158,8 +1158,10 @@ a:hover {
             135deg,
 
             /* #7e22ce, */
-             #4b286e, 
+             /* #4b286e, */
              /*main color on logo, business card and giveaway */
+
+            #c026d3,
 
             #dbe120
 
@@ -1168,6 +1170,7 @@ a:hover {
         );
 
     color: white;
+    /* color: #4b286e; */
     font-size: 21px;
     cursor: pointer;
     opacity: 0;
@@ -1202,8 +1205,12 @@ a:hover {
     position: absolute;
     width: 16px;
     height: 21px;
-    background: #ffffff;
-    border-radius: 50% 50% 45% 45%;
+    /* background: #ffffff; */
+    background: #dbe120;
+    border: 3px solid #4b286e;
+    /* border: #4b286e; */
+    /* border: 3px solid #ffffff; */
+    border-radius:50% 50% 45% 45%;
     left: 50%;
     top: 9px;
     transform: translateX(-50%);
@@ -1218,7 +1225,8 @@ a:hover {
     position: absolute;
     width: 10px;
     height: 7px;
-    border: 3px solid #ffffff;
+    /* border: 3px solid #ffffff; */
+    border: 3px solid #4b286e;
     border-top: none;
     border-radius: 0 0 4px 4px;
     left: 50%;
