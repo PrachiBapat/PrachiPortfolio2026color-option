@@ -20,7 +20,7 @@ body {
     position: relative;
     z-index: 0;
 
-    background: radial-gradient(circle at 10% 10%,rgba(126, 34, 206, 0.20),transparent 25%),
+    background: radial-gradient(circle at 10% 10%,rgba(126, 34, 206, 0.20),transparent 25%), 
 
                 radial-gradient(circle at 90% 25%, rgba(192, 132, 252, 0.18),transparent 25%),
 
@@ -38,7 +38,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url('assets/doodleJPG.jpg');
+    background-image: url('assets/doodleJPG.jpg'); /*background image fromIpad */
     background-size: 300px;
     background-repeat: repeat;
     opacity: 0.04;
@@ -59,7 +59,9 @@ body::after {
 
     top: 25%;
     border-radius: 50%;
-    border: 2px solid rgba(168, 85, 247, 0.18);
+    /* border: 2px solid rgba(168, 85, 247, 0.18); */
+
+    border: 2px solid rgba(219, 225, 30, 0.1);/* (big floating circle) */
     box-shadow: 0 0 80px rgba(126, 34, 206, 0.10);
     z-index: -5;
     pointer-events: none;
@@ -113,18 +115,19 @@ body::after {
 
 }
 
-.decoration-one {
+.decoration-one {  /* circle 1 */
 
     width: 90px;
     height: 90px;
     left: 3%;
     top: 30%;
     border: 3px solid rgba(126, 34, 206, 0.16);
+    /* border: 3px solid rgba(219, 225, 30); */
     animation: floatingOne 7s ease-in-out infinite;
 
 }
 
-.decoration-two {
+.decoration-two { /* circle 2 */
 
     width: 45px;
     height: 45px;
@@ -138,7 +141,7 @@ body::after {
 
 }
 
-.decoration-three {
+.decoration-three {  /* circle 3 */
 
     width: 25px;
     height: 25px;
@@ -223,7 +226,7 @@ body::after {
 
 /* mouse glow */
 
-.mouse-glow {
+.mouse-glow {    /*the yellow mouse glow*/
 
     position: fixed; 
     width: 220px;
@@ -487,7 +490,10 @@ body::after {
 
 h1 {
 
+    font-family: "Caveat", cursive;
     font-size: clamp(2rem, 4vw, 3.6rem);
+    /* font-size: clamp(2rem, 4vw, 3.6rem); */
+
     line-height: 1.08;
     font-weight: 600;
     margin-bottom: 30px;
@@ -526,10 +532,11 @@ h1::before {
 
     content: "PORTFOLIO • 2026";
     display: block;
-    font-size: 0.72rem;
+    font-size: 0.92rem;
     letter-spacing: 3px;
     font-weight: 600;
-    color: #9333ea;
+    /* color: #9333ea; */
+    color: #4b286e;
     margin-bottom: 14px;
     animation: letterAppear 1.5s ease forwards;
 
@@ -679,13 +686,10 @@ a:hover {
 .featured {
 
     margin:30px 0 85px;
-
     padding: 28px 32px;
-
     border: 1px solid rgba(126, 34, 206, 0.18);
-
-    border-left: 6px solid #a855f7;
-
+    /* border-left: 6px solid #a855f7; */
+    border-left: 6px solid #dbe120;
     border-radius: 0 22px 22px 0;
 
     background:
@@ -701,9 +705,7 @@ a:hover {
         );
 
     box-shadow:0 12px 35px rgba(126, 34, 206, 0.09);
-
     position: relative;
-
     overflow: hidden;
 
     transition:
@@ -786,7 +788,6 @@ a:hover {
         );
 
     border: 1px solid rgba(126, 34, 206, 0.16);
-
     box-shadow: 0 12px 40px rgba(126, 34, 206, 0.07);
 
     position: relative;
