@@ -607,4 +607,17 @@ document.addEventListener('DOMContentLoaded', function() {
     );
 
 
+       // Logo-bulb
+        function changeImage() {
+          var image = document.getElementById('myImage');
+          if (image.src.match("bulb-off.png")) {
+            image.src = "bulb-on.png";
+          } else {
+            image.src = "bulb-off.png";
+          }
+        }
+
+
 });
+
+ 
