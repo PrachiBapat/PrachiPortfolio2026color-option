@@ -418,7 +418,13 @@ body::after {
 
 }
 
+
 .nav-item a.active {
+    color: #4b286e;
+    background: transparent;
+}
+
+/* .nav-item a.active {
 
     color: #ffffff;
 
@@ -430,11 +436,11 @@ body::after {
 
             #7e22ce,
 
-            #9333ea
+            #9333ea */
 
             /* #dbe120 */
 
-        );
+        /* ); */
 
     box-shadow:
 
