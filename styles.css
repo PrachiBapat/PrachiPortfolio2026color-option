@@ -368,6 +368,8 @@ body::after {
     width: 0;
     height: 2px;
     border-radius: 10px;
+    /* text-decoration-line: none; */
+    /* text-decoration: none; */
     background:
 
         linear-gradient(
@@ -376,9 +378,11 @@ body::after {
 
             #7e22ce,
 
-            #a855f7,
+            /* #a855f7,
 
-            #d8b4fe
+            #d8b4fe */
+
+             #dbe120
 
         );
 
@@ -407,6 +411,8 @@ body::after {
         scale(1.04);
 
     color: #581c87;
+    /* color: #dbe120; */
+    text-decoration: none;
 
     background: rgba(216, 180, 254, 0.35);
 
@@ -425,6 +431,8 @@ body::after {
             #7e22ce,
 
             #9333ea
+
+            /* #dbe120 */
 
         );
 
@@ -977,7 +985,11 @@ a:hover {
 
             rgba(233, 213, 255, 0.9),
 
-            rgba(243, 232, 255, 0.7)
+            /* rgba(243, 232, 255, 0.7), */
+
+            rgba(219, 225, 32, 0.3)
+
+                                            /* opacity of colours on the tag- gradient colour */
 
         );
 
@@ -1200,7 +1212,7 @@ a:hover {
 /* CSS LIGHT BULB */
 
 .back-to-top::before {
-
+                        /* Bulb on the scroll */
     content: "";
     position: absolute;
     width: 16px;
@@ -1220,7 +1232,7 @@ a:hover {
 }
 
 .back-to-top::after {
-
+                          /* bulb down part */
     content: "";
     position: absolute;
     width: 10px;
@@ -1417,7 +1429,7 @@ a:hover {
 
         grid-template-columns:
 
-            1fr;
+            repeat(3, 1fr);
 
     }
 
